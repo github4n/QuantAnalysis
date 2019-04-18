@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MenuWindow</class>
+ <widget class="QWidget" name="MenuWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1600</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1600</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>量化金融</string>
+  </property>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>511</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+    <item>
+     <widget class="QPushButton" name="MarketInfoButton">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+background-color: rgb(180, 30, 0);
+color: rgb(255, 255, 0);
+}
+QPushButton:pressed{
+background-color: rgb(60, 60, 60);
+color: rgb(0, 0, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>股市资讯</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="SelectStocksButton">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+background-color: rgb(180, 30, 0);
+color: rgb(255, 255, 0);
+}
+QPushButton:pressed{
+background-color: rgb(60, 60, 60);
+color: rgb(0, 0, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>自选股票</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="TradeStrategyButton">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+background-color: rgb(180, 30, 0);
+color: rgb(255, 255, 0);
+}
+QPushButton:pressed{
+background-color: rgb(60, 60, 60);
+color: rgb(0, 0, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>交易策略</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="SimulateTradeButton">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+background-color: rgb(180, 30, 0);
+color: rgb(255, 255, 0);
+}
+QPushButton:pressed{
+background-color: rgb(60, 60, 60);
+color: rgb(0, 0, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>模拟交易</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="UserFunctionButton">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+background-color: rgb(180, 30, 0);
+color: rgb(255, 255, 0);
+}
+QPushButton:pressed{
+background-color: rgb(60, 60, 60);
+color: rgb(0, 0, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>用户功能</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="ContentWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>30</y>
+     <width>1600</width>
+     <height>870</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1600</width>
+     <height>870</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1600</width>
+     <height>870</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TopLine">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>30</y>
+     <width>1600</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 127);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
