@@ -16,7 +16,7 @@ class Ui_MenuWindow(object):
         MenuWindow.setMinimumSize(QtCore.QSize(1600, 900))
         MenuWindow.setMaximumSize(QtCore.QSize(1600, 900))
         self.horizontalLayoutWidget = QtWidgets.QWidget(MenuWindow)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(0, 0, 511, 32))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(0, 0, 604, 32))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -102,6 +102,26 @@ class Ui_MenuWindow(object):
 "}")
         self.SimulateTradeButton.setObjectName("SimulateTradeButton")
         self.horizontalLayout.addWidget(self.SimulateTradeButton)
+        self.QuantAnalysisButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+        self.QuantAnalysisButton.setMinimumSize(QtCore.QSize(0, 30))
+        self.QuantAnalysisButton.setMaximumSize(QtCore.QSize(16777215, 30))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        self.QuantAnalysisButton.setFont(font)
+        self.QuantAnalysisButton.setStyleSheet("QPushButton{\n"
+"background-color: rgb(0, 0, 0);\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"QPushButton:hover{\n"
+"background-color: rgb(180, 30, 0);\n"
+"color: rgb(255, 255, 0);\n"
+"}\n"
+"QPushButton:pressed{\n"
+"background-color: rgb(60, 60, 60);\n"
+"color: rgb(0, 0, 255);\n"
+"}")
+        self.QuantAnalysisButton.setObjectName("QuantAnalysisButton")
+        self.horizontalLayout.addWidget(self.QuantAnalysisButton)
         self.UserFunctionButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.UserFunctionButton.setMinimumSize(QtCore.QSize(0, 30))
         self.UserFunctionButton.setMaximumSize(QtCore.QSize(16777215, 30))
@@ -143,6 +163,7 @@ class Ui_MenuWindow(object):
         self.SelectStocksButton.setText(_translate("MenuWindow", "自选股票"))
         self.TradeStrategyButton.setText(_translate("MenuWindow", "交易策略"))
         self.SimulateTradeButton.setText(_translate("MenuWindow", "模拟交易"))
+        self.QuantAnalysisButton.setText(_translate("MenuWindow", "量化分析"))
         self.UserFunctionButton.setText(_translate("MenuWindow", "用户功能"))
 
 

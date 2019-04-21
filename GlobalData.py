@@ -18,7 +18,7 @@ def Init():
     DailyBasic = pandas.read_csv("Data/DailyBasic.csv")
     #DailyBasic = _GlobalDict["TusharePro"].daily_basic(ts_code='', trade_date='20190415', fields='ts_code,trade_date,close,turnover_rate,turnover_rate_f,volume_ratio,pe,pe_ttm,pb,ps,ps_ttm,total_share,float_share,free_share,total_mv,circ_mv')
     #合并日数据和股票基础数据
-    StockMergeTable = pandas.merge(StockBasic, DailyBasic, on = ['ts_code'], how='inner')
+    StockMergeTable = pandas.merge(StockBasic, DailyBasic, on = ['ts_code'], how = 'inner')
     #去掉Unnamed列
     _GlobalDict["TotalStock"] = StockMergeTable.loc[:, ~StockMergeTable.columns.str.match('Unnamed')]
 

@@ -29,31 +29,17 @@ class MarketInfoWidget(QWidget, Ui_MarketInfoWindow):
         self.LeftButtonList[self.CurrectSelectIndex].setStyleSheet(GlobalData.GetValue("ButtonSelectStyle"))
 
     def BindEvent(self):
-        self.ShenhuStockButton.clicked.connect(self.ShenhuStockButtonEvent)
-        self.ShenhuExponentButton.clicked.connect(self.ShenhuExponentButtonEvent)
-        self.NewStockIPOButton.clicked.connect(self.NewStockIPOButtonEvent)
-        self.FundBondsButton.clicked.connect(self.FundBondsButtonEvent)
-        self.OptionsMarketButton.clicked.connect(self.OptionsMarketButtonEvent)
-        self.HotInfoButton.clicked.connect(self.HotInfoButtonEvent)
-
-
-    def ShenhuStockButtonEvent(self):
-        self.LeftButtonEvent(0)
-
-    def ShenhuExponentButtonEvent(self):
-        self.LeftButtonEvent(1)
-
-    def NewStockIPOButtonEvent(self):
-        self.LeftButtonEvent(2)
-
-    def FundBondsButtonEvent(self):
-        self.LeftButtonEvent(3)
-
-    def OptionsMarketButtonEvent(self):
-        self.LeftButtonEvent(4)
-
-    def HotInfoButtonEvent(self):
-        self.LeftButtonEvent(5)
+        """使用循环来设置lambda的参数没有效果
+        for i in range(0, len(self.LeftButtonList) - 1):
+            print("i --> ", i)
+            self.LeftButtonList[i].clicked.connect(lambda: self.LeftButtonEvent(i))
+        """
+        self.ShenhuStockButton.clicked.connect(lambda: self.LeftButtonEvent(0))
+        self.ShenhuExponentButton.clicked.connect(lambda: self.LeftButtonEvent(1))
+        self.NewStockIPOButton.clicked.connect(lambda: self.LeftButtonEvent(2))
+        self.FundBondsButton.clicked.connect(lambda: self.LeftButtonEvent(3))
+        self.OptionsMarketButton.clicked.connect(lambda: self.LeftButtonEvent(4))
+        self.HotInfoButton.clicked.connect(lambda: self.LeftButtonEvent(5))
 
     def LeftButtonEvent(self, InIndex):
         if self.CurrectSelectIndex == InIndex:

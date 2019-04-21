@@ -25,44 +25,6 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QScrollArea" name="ScrollArea">
-   <property name="geometry">
-    <rect>
-     <x>259</x>
-     <y>30</y>
-     <width>600</width>
-     <height>841</height>
-    </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::NoFrame</enum>
-   </property>
-   <property name="widgetResizable">
-    <bool>true</bool>
-   </property>
-   <widget class="QWidget" name="ScrollContentWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>1180</width>
-      <height>824</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>1180</width>
-      <height>100</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>1180</width>
-      <height>16777215</height>
-     </size>
-    </property>
-   </widget>
-  </widget>
   <widget class="QWidget" name="TopLeftWidget" native="true">
    <property name="geometry">
     <rect>
@@ -98,7 +60,7 @@
       <number>0</number>
      </property>
      <item>
-      <widget class="QLabel" name="OrderLabel">
+      <widget class="QLabel" name="OrderParamLabel">
        <property name="minimumSize">
         <size>
          <width>50</width>
@@ -120,7 +82,8 @@
         <enum>Qt::RightToLeft</enum>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(168, 168, 168);</string>
+        <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(168, 168, 168);</string>
        </property>
        <property name="text">
         <string>序</string>
@@ -192,9 +155,9 @@ color: rgb(168, 168, 168);</string>
   <widget class="QWidget" name="LeftWidget" native="true">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>0</x>
      <y>30</y>
-     <width>210</width>
+     <width>260</width>
      <height>825</height>
     </rect>
    </property>
@@ -203,43 +166,7 @@ color: rgb(168, 168, 168);</string>
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>210</width>
-      <height>80</height>
-     </rect>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>854</y>
-     <width>260</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(168, 168, 168);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QWidget" name="OrderWidget" native="true">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>30</y>
-     <width>50</width>
-     <height>825</height>
-    </rect>
-   </property>
-   <widget class="QWidget" name="OrderContentWidget" native="true">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>50</width>
+      <width>260</width>
       <height>80</height>
      </rect>
     </property>
@@ -263,414 +190,408 @@ color: rgb(168, 168, 168);</string>
       <height>30</height>
      </rect>
     </property>
-    <widget class="QWidget" name="horizontalLayoutWidget">
+    <widget class="QPushButton" name="PBButton">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>0</y>
+       <width>80</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(168, 168, 168);</string>
+     </property>
+     <property name="text">
+      <string>市净率</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="VolumeRatioButton">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>0</y>
+       <width>60</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(168, 168, 168);</string>
+     </property>
+     <property name="text">
+      <string>量比</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="PSTTMButton">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>0</y>
+       <width>80</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(168, 168, 168);</string>
+     </property>
+     <property name="text">
+      <string>市销率TTM</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CloseButton">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>0</y>
+       <width>60</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(168, 168, 168);</string>
+     </property>
+     <property name="text">
+      <string>收盘</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="PETTMButton">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>0</y>
+       <width>80</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(168, 168, 168);</string>
+     </property>
+     <property name="text">
+      <string>市盈率TTM</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="FloatShareButton">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>0</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(168, 168, 168);</string>
+     </property>
+     <property name="text">
+      <string>流通股本</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="TurnOverRateButton">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>0</y>
+       <width>60</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(168, 168, 168);</string>
+     </property>
+     <property name="text">
+      <string>换手%</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="IndustryButton">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>0</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(168, 168, 168);</string>
+     </property>
+     <property name="text">
+      <string>所属行业</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="TotalMVButton">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>1182</width>
-       <height>32</height>
+       <width>100</width>
+       <height>30</height>
       </rect>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <property name="spacing">
-       <number>0</number>
-      </property>
-      <item>
-       <widget class="QPushButton" name="TotalMVButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>100</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
 color: rgb(168, 168, 168);</string>
-        </property>
-        <property name="text">
-         <string>总市值</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="TotalShareButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>100</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
+     </property>
+     <property name="text">
+      <string>总市值</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="PSButton">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>0</y>
+       <width>80</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
 color: rgb(168, 168, 168);</string>
-        </property>
-        <property name="text">
-         <string>总股本</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="CloseButton">
-        <property name="minimumSize">
-         <size>
-          <width>60</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>60</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
+     </property>
+     <property name="text">
+      <string>市销率</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="FreeShareButton">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>0</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
 color: rgb(168, 168, 168);</string>
-        </property>
-        <property name="text">
-         <string>收盘</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="TurnOverRateButton">
-        <property name="minimumSize">
-         <size>
-          <width>60</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>60</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
+     </property>
+     <property name="text">
+      <string>自由流通股本</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="TotalShareButton">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>0</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
 color: rgb(168, 168, 168);</string>
-        </property>
-        <property name="text">
-         <string>换手%</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="VolumeRatioButton">
-        <property name="minimumSize">
-         <size>
-          <width>60</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>60</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
+     </property>
+     <property name="text">
+      <string>总股本</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="PEButton">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>0</y>
+       <width>80</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
 color: rgb(168, 168, 168);</string>
-        </property>
-        <property name="text">
-         <string>量比</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="IndustryButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>100</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
+     </property>
+     <property name="text">
+      <string>市盈率</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CircMVButton">
+     <property name="geometry">
+      <rect>
+       <x>880</x>
+       <y>0</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
 color: rgb(168, 168, 168);</string>
-        </property>
-        <property name="text">
-         <string>所属行业</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="PEButton">
-        <property name="minimumSize">
-         <size>
-          <width>80</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>80</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(168, 168, 168);</string>
-        </property>
-        <property name="text">
-         <string>市盈率</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="PETTMButton">
-        <property name="minimumSize">
-         <size>
-          <width>80</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>80</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(168, 168, 168);</string>
-        </property>
-        <property name="text">
-         <string>市盈率TTM</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="PBButton">
-        <property name="minimumSize">
-         <size>
-          <width>80</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>80</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(168, 168, 168);</string>
-        </property>
-        <property name="text">
-         <string>市净率</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="PSButton">
-        <property name="minimumSize">
-         <size>
-          <width>80</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>80</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(168, 168, 168);</string>
-        </property>
-        <property name="text">
-         <string>市销率</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="PSTTMButton">
-        <property name="minimumSize">
-         <size>
-          <width>80</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>80</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(168, 168, 168);</string>
-        </property>
-        <property name="text">
-         <string>市销率TTM</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="CircMvButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>100</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(168, 168, 168);</string>
-        </property>
-        <property name="text">
-         <string>流通市值</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="FloatShareButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>100</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(168, 168, 168);</string>
-        </property>
-        <property name="text">
-         <string>流通股本</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="FreeShareButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>100</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(168, 168, 168);</string>
-        </property>
-        <property name="text">
-         <string>自由流通股本</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     </property>
+     <property name="text">
+      <string>流通市值</string>
+     </property>
     </widget>
    </widget>
+  </widget>
+  <widget class="QWidget" name="MiddleWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>30</y>
+     <width>600</width>
+     <height>825</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="StockWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>120</width>
+      <height>80</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QScrollBar" name="HorScrollBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>855</y>
+     <width>860</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>49</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QScrollBar" name="VerScrollBar">
+   <property name="geometry">
+    <rect>
+     <x>860</x>
+     <y>0</y>
+     <width>15</width>
+     <height>870</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>999</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StockNameLabel">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>0</y>
+     <width>631</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>30</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 170, 0);</string>
+   </property>
+   <property name="text">
+    <string>平安银行</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>879</x>
+     <y>49</y>
+     <width>621</width>
+     <height>821</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="RenderLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+   </layout>
   </widget>
  </widget>
  <resources/>

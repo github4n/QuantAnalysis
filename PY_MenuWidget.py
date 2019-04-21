@@ -26,33 +26,20 @@ class MenuWidget(QWidget, Ui_MenuWindow):
         palette.setColor(self.backgroundRole(), QColor(0, 0, 0, 0))
         self.setPalette(palette)
         #把按钮全部填入队列
-        self.TopButtonList = [self.MarketInfoButton, self.SelectStocksButton, self.TradeStrategyButton, self.SimulateTradeButton, self.UserFunctionButton]
+        self.TopButtonList = [self.MarketInfoButton, self.SelectStocksButton, self.TradeStrategyButton, self.SimulateTradeButton, self.QuantAnalysisButton, self.UserFunctionButton]
         #设置当前选中的id
         self.CurrectSelectIndex = 0
         # 默认设置股市资讯选中
         self.TopButtonList[self.CurrectSelectIndex].setStyleSheet(GlobalData.GetValue("ButtonSelectStyle"))
 
     def BindEvent(self):
-        self.MarketInfoButton.clicked.connect(self.MarketInfoButtonEvent)
-        self.SelectStocksButton.clicked.connect(self.SelectStocksButtonEvent)
-        self.TradeStrategyButton.clicked.connect(self.TradeStrategyButtonEvent)
-        self.SimulateTradeButton.clicked.connect(self.SimulateTradeButtonEvent)
-        self.UserFunctionButton.clicked.connect(self.UserFunctionButtonEvent)
+        self.MarketInfoButton.clicked.connect(lambda: self.TopButtonEvent(0))
+        self.SelectStocksButton.clicked.connect(lambda: self.TopButtonEvent(1))
+        self.TradeStrategyButton.clicked.connect(lambda: self.TopButtonEvent(2))
+        self.SimulateTradeButton.clicked.connect(lambda: self.TopButtonEvent(3))
+        self.QuantAnalysisButton.clicked.connect(lambda: self.TopButtonEvent(4))
+        self.UserFunctionButton.clicked.connect(lambda: self.TopButtonEvent(5))
 
-    def MarketInfoButtonEvent(self):
-        self.TopButtonEvent(0)
-
-    def SelectStocksButtonEvent(self):
-        self.TopButtonEvent(1)
-
-    def TradeStrategyButtonEvent(self):
-        self.TopButtonEvent(2)
-
-    def SimulateTradeButtonEvent(self):
-        self.TopButtonEvent(3)
-
-    def UserFunctionButtonEvent(self):
-        self.TopButtonEvent(4)
 
     def TopButtonEvent(self, InIndex):
         print(InIndex)
