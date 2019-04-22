@@ -2,6 +2,7 @@
 使用Python开发的金融量化分析桌面软件
 # 软件界面预览
 ![](https://github.com/huanghaiyan123/QuantAnalysis/blob/master/Image/ShenhuStockUI.jpg)
+
 通过pandas,tushare,datareader等数据库获取一些重要的金融数据和金融新闻,并对数据进行筛选,获取特定的信息.
 利用pandas对获取的数据进行一定的数据分析,对数据进行统计,均值,方差等计算,估算其风险和收益,预判其走势来对股票和基金进行分析.
 软件基于PyQt5开发桌面UI，使用Tushare等数据库提取金融数据以及咨询数据，使用Pandas进行数据的IO表格处理，使用Seaborn，Matplotlib，Pylab等绘图库进行数据算法解析并且绘制出图形图像提供可视化界面。
