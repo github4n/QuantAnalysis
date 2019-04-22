@@ -269,7 +269,7 @@ class ShenhuStockWidget(QWidget, Ui_ShenhuStockWindow):
         #设定正在执行线程
         self.ThreadIsAlive = True
 
-        wdyx = GlobalData.GetValue("Tushare").get_k_data('002739', '2018-01-01')
+        wdyx = GlobalData.GetValue("Tushare").get_k_data(ExpectTSCode[:-3], '2018-01-01')
         wdyx.info()
         mat_wdyx = wdyx.as_matrix()
 
@@ -290,6 +290,13 @@ class ShenhuStockWidget(QWidget, Ui_ShenhuStockWindow):
         self.Axes2.set_ylabel('Volume')
         self.Axes2.xaxis_date()
         self.Axes2.grid(True)
+
+        n = 12
+        X = numpy.arange(n)
+        Y1 = (1 - X / float(n)) * np.random.uniform(0.5, 1.0, n)
+        Y2 = (1 - X / float(n)) * np.random.uniform(0.5, 1.0, n)
+        self.Axes3.bar(X, +Y1, facecolor='#9999ff', edgecolor='white')
+        self.Axes3.bar(X, -Y2, facecolor='#ff9999', edgecolor='white')
 
         # 重新绘制
         self.StockFigure.Figure.canvas.draw()
